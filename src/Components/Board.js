@@ -3,6 +3,9 @@ import React from "react";
 // connect to Redux state
 import { connect } from "react-redux";
 
+// import CSS
+import "./Board.css";
+
 // components found in components folder
 import Row from "./Row";
 

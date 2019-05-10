@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 // // components found in components folder
 // import Board from "../components/Board";
@@ -6,16 +6,12 @@ import React, { Fragment } from "react";
 const Column = props => {
   if (props.number === "0") {
     return (
-      <Fragment className={`${props.row} ${props.column}`}>
-        <input />
-      </Fragment>
+      <td className={`${props.row} ${props.column}`}>
+        <input style={{ height: "2vh", width: "2vh" }} />
+      </td>
     );
   } else {
-    return (
-      <Fragment className={`${props.row} ${props.column}`}>
-        {props.number}
-      </Fragment>
-    );
+    return <td className={`${props.row} ${props.column}`}>{props.number}</td>;
   }
 };
 

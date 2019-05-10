@@ -2,16 +2,18 @@ table {
   border: 2px solid #000000;
   width: 50vw;
   margin: auto;
+  background: #000000;
 }
 
 tr {
   width: 50vw;
   margin: auto;
+  background: white;
 }
 
 td {
   border: 1px solid #000000;
-  padding: 3vh;
+  padding: 1vw;
   text-align: center;
   vertical-align: middle;
 }
@@ -30,4 +32,54 @@ input {
 
 input:disabled {
   background-color: #eeeeee;
+}
+
+/* Horizontal bolded bottom boders */
+.row3.column1,
+.row3.column2,
+.row3.column3,
+.row3.column4,
+.row3.column5,
+.row3.column6,
+.row3.column7,
+.row3.column8,
+.row3.column9 {
+  border-bottom: 8px solid #000000;
+}
+
+.row6.column1,
+.row6.column2,
+.row6.column3,
+.row6.column4,
+.row6.column5,
+.row6.column6,
+.row6.column7,
+.row6.column8,
+.row6.column9 {
+  border-bottom: 8px solid #000000;
+}
+
+/* vertical bolded border-right */
+.column3.row1,
+.column3.row2,
+.column3.row3,
+.column3.row4,
+.column3.row5,
+.column3.row6,
+.column3.row7,
+.column3.row8,
+.column3.row9 {
+  border-right: 8px solid #000000;
+}
+
+.column6.row1,
+.column6.row2,
+.column6.row3,
+.column6.row4,
+.column6.row5,
+.column6.row6,
+.column6.row7,
+.column6.row8,
+.column6.row9 {
+  border-right: 8px solid #000000;
 }

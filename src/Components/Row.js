@@ -16,13 +16,21 @@ const Row = props => {
   return (
     <tr>
       <Column row={props.row} column="column1" number={column1_num} />
+
       <Column row={props.row} column="column2" number={column2_num} />
+
       <Column row={props.row} column="column3" number={column3_num} />
+
       <Column row={props.row} column="column4" number={column4_num} />
+
       <Column row={props.row} column="column5" number={column5_num} />
+
       <Column row={props.row} column="column6" number={column6_num} />
+
       <Column row={props.row} column="column7" number={column7_num} />
+
       <Column row={props.row} column="column8" number={column8_num} />
+
       <Column row={props.row} column="column9" number={column9_num} />
     </tr>
   );

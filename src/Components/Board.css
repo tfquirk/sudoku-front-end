@@ -1,5 +1,5 @@
 table {
-  border: 2px solid #000000;
+  border: 8px solid #000000;
   width: 50vw;
   margin: auto;
   background: #000000;
@@ -20,7 +20,7 @@ td {
 
 input {
   color: #000000;
-  padding: 0;
+  padding: 1vh;
   border: 0;
   text-align: center;
   width: 48px;
@@ -82,4 +82,12 @@ input:disabled {
 .column6.row8,
 .column6.row9 {
   border-right: 8px solid #000000;
+}
+
+.green,
+.green input {
+  background-color: #b2ffb2;
+  color: black;
+  font-size: 24px;
+  font-weight: bold;
 }

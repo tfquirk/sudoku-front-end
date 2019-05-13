@@ -4,6 +4,7 @@ import React from "react";
 import Column from "./Column";
 
 const Row = props => {
+  // split numbers string from 9 numbers into the columns they belong in
   const column1_num = props.numbers.substr(0, 1);
   const column2_num = props.numbers.substr(1, 1);
   const column3_num = props.numbers.substr(2, 1);
@@ -14,6 +15,7 @@ const Row = props => {
   const column8_num = props.numbers.substr(7, 1);
   const column9_num = props.numbers.substr(8, 1);
 
+  // split solution string from 9 numbers into the columns they belong in
   const column1_solution = props.solutions.substr(0, 1);
   const column2_solution = props.solutions.substr(1, 1);
   const column3_solution = props.solutions.substr(2, 1);

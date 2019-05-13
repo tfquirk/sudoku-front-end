@@ -11,9 +11,15 @@ import Row from "./Row";
 
 const Board = props => {
   if (props.boards.length === 0) {
+    // TODO: Add spinner
     return null;
   } else {
-    const puzzle = props.boards[0].puzzle;
+    // get randomPuzzleId to randomly display a puzzle from all of those
+    // returned from the API
+    const randomPuzzleId = Math.floor(Math.random() * props.boards.length);
+    const puzzle = props.boards[randomPuzzleId].puzzle;
+
+    // Split the puzzle into its 9 rows
     const row1 = puzzle.substr(0, 9);
     const row2 = puzzle.substr(9, 9);
     const row3 = puzzle.substr(18, 9);
@@ -24,7 +30,9 @@ const Board = props => {
     const row8 = puzzle.substr(63, 9);
     const row9 = puzzle.substr(72, 9);
 
-    const solution = props.boards[0].solution;
+    // get the solution for the random puzzle and split that
+    // information into its 9 rows
+    const solution = props.boards[randomPuzzleId].solution;
     const row1_solution = solution.substr(0, 9);
     const row2_solution = solution.substr(9, 9);
     const row3_solution = solution.substr(18, 9);

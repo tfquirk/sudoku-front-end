@@ -4,27 +4,51 @@ import React from "react";
 import Column from "./Column";
 
 const Row = props => {
-  // split numbers string from 9 numbers into the columns they belong in
-  const column1_num = props.numbers.substr(0, 1);
-  const column2_num = props.numbers.substr(1, 1);
-  const column3_num = props.numbers.substr(2, 1);
-  const column4_num = props.numbers.substr(3, 1);
-  const column5_num = props.numbers.substr(4, 1);
-  const column6_num = props.numbers.substr(5, 1);
-  const column7_num = props.numbers.substr(6, 1);
-  const column8_num = props.numbers.substr(7, 1);
-  const column9_num = props.numbers.substr(8, 1);
+  // destructure and split numbers string from 9 numbers into the columns they belong in
+  const [
+    column1_num,
+    column2_num,
+    column3_num,
+    column4_num,
+    column5_num,
+    column6_num,
+    column7_num,
+    column8_num,
+    column9_num
+  ] = [
+    props.numbers.substr(0, 1),
+    props.numbers.substr(1, 1),
+    props.numbers.substr(2, 1),
+    props.numbers.substr(3, 1),
+    props.numbers.substr(4, 1),
+    props.numbers.substr(5, 1),
+    props.numbers.substr(6, 1),
+    props.numbers.substr(7, 1),
+    props.numbers.substr(8, 1)
+  ];
 
-  // split solution string from 9 numbers into the columns they belong in
-  const column1_solution = props.solutions.substr(0, 1);
-  const column2_solution = props.solutions.substr(1, 1);
-  const column3_solution = props.solutions.substr(2, 1);
-  const column4_solution = props.solutions.substr(3, 1);
-  const column5_solution = props.solutions.substr(4, 1);
-  const column6_solution = props.solutions.substr(5, 1);
-  const column7_solution = props.solutions.substr(6, 1);
-  const column8_solution = props.solutions.substr(7, 1);
-  const column9_solution = props.solutions.substr(8, 1);
+  // destructure and split solution string from 9 numbers into the columns they belong in
+  const [
+    column1_solution,
+    column2_solution,
+    column3_solution,
+    column4_solution,
+    column5_solution,
+    column6_solution,
+    column7_solution,
+    column8_solution,
+    column9_solution
+  ] = [
+    props.solutions.substr(0, 1),
+    props.solutions.substr(1, 1),
+    props.solutions.substr(2, 1),
+    props.solutions.substr(3, 1),
+    props.solutions.substr(4, 1),
+    props.solutions.substr(5, 1),
+    props.solutions.substr(6, 1),
+    props.solutions.substr(7, 1),
+    props.solutions.substr(8, 1)
+  ];
 
   return (
     <tr>

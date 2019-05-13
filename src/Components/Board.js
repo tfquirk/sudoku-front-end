@@ -36,19 +36,23 @@ const Board = props => {
     const row9_solution = solution.substr(72, 9);
 
     return (
-      <table>
-        <tbody>
-          <Row row="row1" numbers={row1} solutions={row1_solution} />
-          <Row row="row2" numbers={row2} solutions={row2_solution} />
-          <Row row="row3" numbers={row3} solutions={row3_solution} />
-          <Row row="row4" numbers={row4} solutions={row4_solution} />
-          <Row row="row5" numbers={row5} solutions={row5_solution} />
-          <Row row="row6" numbers={row6} solutions={row6_solution} />
-          <Row row="row7" numbers={row7} solutions={row7_solution} />
-          <Row row="row8" numbers={row8} solutions={row8_solution} />
-          <Row row="row9" numbers={row9} solutions={row9_solution} />
-        </tbody>
-      </table>
+      <div className="sudoku-container">
+        <div className="sudoku">
+          <table>
+            <tbody>
+              <Row row="row1" numbers={row1} solutions={row1_solution} />
+              <Row row="row2" numbers={row2} solutions={row2_solution} />
+              <Row row="row3" numbers={row3} solutions={row3_solution} />
+              <Row row="row4" numbers={row4} solutions={row4_solution} />
+              <Row row="row5" numbers={row5} solutions={row5_solution} />
+              <Row row="row6" numbers={row6} solutions={row6_solution} />
+              <Row row="row7" numbers={row7} solutions={row7_solution} />
+              <Row row="row8" numbers={row8} solutions={row8_solution} />
+              <Row row="row9" numbers={row9} solutions={row9_solution} />
+            </tbody>
+          </table>
+        </div>
+      </div>
     );
   }
 };

@@ -18,7 +18,7 @@ const Board = props => {
     const row2 = puzzle.substr(9, 9);
     const row3 = puzzle.substr(18, 9);
     const row4 = puzzle.substr(27, 9);
-    const row5 = puzzle.substr(39, 9);
+    const row5 = puzzle.substr(36, 9);
     const row6 = puzzle.substr(45, 9);
     const row7 = puzzle.substr(54, 9);
     const row8 = puzzle.substr(63, 9);
@@ -29,7 +29,7 @@ const Board = props => {
     const row2_solution = solution.substr(9, 9);
     const row3_solution = solution.substr(18, 9);
     const row4_solution = solution.substr(27, 9);
-    const row5_solution = solution.substr(39, 9);
+    const row5_solution = solution.substr(36, 9);
     const row6_solution = solution.substr(45, 9);
     const row7_solution = solution.substr(54, 9);
     const row8_solution = solution.substr(63, 9);

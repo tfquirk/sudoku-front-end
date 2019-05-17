@@ -9,22 +9,33 @@ import "./Board.css";
 // components found in components folder
 import Table from "./Table";
 import Row from "./Row";
+import Loading from "./Loading";
 
 const Board = props => {
+  // container styles
   const sudokuContainer = {
     minWidth: "100vw",
     minHeight: "100vh",
     display: "table"
   };
 
+  // sudoku game style
   const sudoku = {
     display: "table-cell",
     verticalAlign: "middle"
   };
 
+  // if Redux state does not hold any games, return a loading gif
   if (props.boards.length === 0) {
-    // TODO: Add spinner
-    return null;
+    return (
+      <div style={sudokuContainer}>
+        <div style={sudoku}>
+          <Loading />
+        </div>
+      </div>
+    );
+
+    // if Redux state holds games, then return a random game
   } else {
     // get randomPuzzleId to randomly display a puzzle from all of those
     // returned from the API

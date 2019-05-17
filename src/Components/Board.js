@@ -10,6 +10,17 @@ import "./Board.css";
 import Row from "./Row";
 
 const Board = props => {
+  const sudokuContainer = {
+    minWidth: "100vw",
+    minHeight: "100vh",
+    display: "table"
+  };
+
+  const sudoku = {
+    display: "table-cell",
+    verticalAlign: "middle"
+  };
+
   if (props.boards.length === 0) {
     // TODO: Add spinner
     return null;
@@ -25,8 +36,8 @@ const Board = props => {
     ];
 
     return (
-      <div className="sudoku-container">
-        <div className="sudoku">
+      <div style={sudokuContainer}>
+        <div style={sudoku}>
           <table>
             <tbody>
               <Row

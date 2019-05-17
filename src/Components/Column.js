@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 
-// // components found in components folder
-// import Board from "../components/Board";
-
 const Column = props => {
+  const tdStyles = {
+    padding: "0.5vw",
+    textAlign: "center"
+  };
+
   const correct_answer = props.solution;
   const [userAnswer, setUserAnswer] = useState("");
 

@@ -1,50 +1,5 @@
-.sudoku-container {
-  min-width: 100vw;
-  min-height: 100vh;
-  display: table;
-}
-
-.sudoku {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-table {
-  border: 8px solid #000000;
-  width: 45vw;
-  height: 45vw;
-  margin: auto;
-  background: #000000;
-}
-
-tr {
-  background: white;
-}
-
-td {
-  border: 1px solid #000000;
-  padding: 0.5vw;
-  text-align: center;
-  vertical-align: middle;
-}
-
-input {
-  color: #000000;
-  padding: 0.5vh;
-  border: 0;
-  text-align: center;
-  width: 48px;
-  height: 48px;
-  font-size: 2em;
-  background-color: #ffffff;
-  outline: none;
-}
-
-input:disabled {
-  background-color: #eeeeee;
-}
-
 /* Horizontal bolded bottom boders */
+
 .row3.column1,
 .row3.column2,
 .row3.column3,
@@ -70,6 +25,7 @@ input:disabled {
 }
 
 /* vertical bolded border-right */
+
 .column3.row1,
 .column3.row2,
 .column3.row3,
@@ -95,6 +51,7 @@ input:disabled {
 }
 
 /* Highlight background green if the box has the correct solution */
+
 .green,
 .green input {
   background-color: #b2ffb2;

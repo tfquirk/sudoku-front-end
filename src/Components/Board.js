@@ -21,6 +21,14 @@ const Board = props => {
     verticalAlign: "middle"
   };
 
+  const table = {
+    border: "8px solid #000000",
+    width: "45vw",
+    height: "45vw",
+    margin: "auto",
+    background: "#000000"
+  };
+
   if (props.boards.length === 0) {
     // TODO: Add spinner
     return null;
@@ -38,7 +46,7 @@ const Board = props => {
     return (
       <div style={sudokuContainer}>
         <div style={sudoku}>
-          <table>
+          <table style={table}>
             <tbody>
               <Row
                 row="row1"

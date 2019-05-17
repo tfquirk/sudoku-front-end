@@ -4,6 +4,10 @@ import React from "react";
 import Column from "./Column";
 
 const Row = props => {
+  const rowStyles = {
+    background: "white"
+  };
+
   // destructure and split numbers string from 9 numbers into the columns they belong in
   const [
     column1_num,
@@ -51,7 +55,7 @@ const Row = props => {
   ];
 
   return (
-    <tr>
+    <tr style={rowStyles}>
       <Column
         row={props.row}
         column="column1"

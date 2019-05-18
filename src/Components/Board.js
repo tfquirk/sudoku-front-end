@@ -15,13 +15,13 @@ import Table from "./Table";
 const Board = props => {
   // container styles
   const gameContainer = {
-    minWidth: "100vw",
+    minWidth: "98vw",
     minHeight: "100vh",
     display: "flex"
   };
 
   const sudokuContainer = {
-    minWidth: "75vw",
+    minWidth: "80vw",
     minHeight: "100vh",
     display: "table"
   };

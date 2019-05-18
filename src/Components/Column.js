@@ -18,6 +18,18 @@ const Column = props => {
     outline: "none"
   };
 
+  const inputStyleGreen = {
+    color: "#000000",
+    padding: "0.5vh",
+    border: "0",
+    textAlign: "center",
+    width: "48px",
+    height: "48px",
+    fontSize: "2em",
+    backgroundColor: "#b2ffb2",
+    outline: "none"
+  };
+
   const correct_answer = props.solution;
   const [userAnswer, setUserAnswer] = useState("");
 
@@ -29,7 +41,7 @@ const Column = props => {
     if (userAnswer === correct_answer) {
       return (
         <td style={tdStyle} className={`${props.row} ${props.column} green`}>
-          <input style={inputStyle} onChange={updateInput} />
+          <input style={inputStyleGreen} onChange={updateInput} />
         </td>
       );
     }

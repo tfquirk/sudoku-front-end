@@ -11,6 +11,7 @@ const Loading = props => {
     <img
       src="https://media.giphy.com/media/l41Yy6jvn3BXYDRu0/giphy.gif"
       style={loadingGif}
+      alt="Sudoku gif while game loading"
     />
   );
 };

@@ -1,13 +1,21 @@
-import React, { Fragment } from "react";
+import React from "react";
 
 // components found in components folder
 import Board from "../Components/Board";
+import Sidebar from "../Components/Sidebar";
 
 const Homepage = props => {
+  const gameContainer = {
+    minWidth: "98vw",
+    minHeight: "100vh",
+    display: "flex"
+  };
+
   return (
-    <Fragment>
+    <div style={gameContainer}>
+      <Sidebar />
       <Board />
-    </Fragment>
+    </div>
   );
 };
 

@@ -4,10 +4,9 @@ import React from "react";
 import "./Board.css";
 
 // components found in components folder
-import Loading from "./Loading";
 import Row from "./Row";
-import Sidebar from "./Sidebar";
 import Table from "./Table";
+import Timer from "./Timer";
 
 const Board = props => {
   // container styles
@@ -31,6 +30,7 @@ const Board = props => {
 
   return (
     <div style={sudokuContainer}>
+      <Timer />
       <div style={sudoku}>
         <Table>
           <Row

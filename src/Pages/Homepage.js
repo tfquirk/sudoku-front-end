@@ -31,7 +31,7 @@ const Homepage = props => {
   } else {
     return (
       <div style={gameContainer}>
-        <Sidebar />
+        <Sidebar board={props.boards[randomPuzzleId]} />
         <Board randomPuzzleId={randomPuzzleId} boards={props.boards} />
       </div>
     );

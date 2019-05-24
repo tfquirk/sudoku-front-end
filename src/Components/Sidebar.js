@@ -14,9 +14,10 @@ const Sidebar = props => {
       <div
         style={{
           border: "1px solid white",
-          margin: "auto",
           width: "15vw",
-          height: "25vh"
+          height: "25vh",
+          margin: "auto",
+          padding: "1vh 1vw"
         }}
       >
         <h1>Game #: {`${props.board.id}/5000`}</h1>

@@ -1,9 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
+import React from "react";
+import ReactDOM from "react-dom";
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
+import ConnectedApp, { App } from "./App";
+import { fetchBoards } from "./Actions/Apis/fetchBoards";
+
+test("fetchBoards dispatches to UPDATE_BOARDS", () => {
+  return fetchBoards().then(data => {
+    expect(data).toEqual(0);
+  });
 });

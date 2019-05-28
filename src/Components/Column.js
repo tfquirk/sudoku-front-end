@@ -1,5 +1,11 @@
 import React, { useState } from "react";
 
+// connect to Redux state
+import { connect } from "react-redux";
+
+// import dispatch action type
+import { COMPLETED_TILE } from "../Types/types";
+
 const Column = props => {
   const tdStyle = {
     padding: "0.5vw",
@@ -37,8 +43,11 @@ const Column = props => {
     setUserAnswer(event.target.value);
   };
 
+  console.log(props.completedTiles);
+
   if (props.number === "0") {
     if (userAnswer === correct_answer) {
+      props.completedTileIncrease();
       return (
         <td style={tdStyle} className={`${props.row} ${props.column} green`}>
           <input style={inputStyleGreen} onChange={updateInput} />
@@ -52,6 +61,7 @@ const Column = props => {
       </td>
     );
   } else {
+    props.completedTileIncrease();
     return (
       <td style={tdStyle} className={`${props.row} ${props.column} green`}>
         {props.number}
@@ -60,4 +70,19 @@ const Column = props => {
   }
 };
 
-export default Column;
+function mapStateToProps(state) {
+  return {
+    completedTiles: state.completedTiles
+  };
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    completedTileIncrease: () => dispatch({ type: COMPLETED_TILE })
+  };
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Column);

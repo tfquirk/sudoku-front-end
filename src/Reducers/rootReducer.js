@@ -3,7 +3,8 @@ const initialState = {
   boards: [],
   token: null,
   currentPlayer: {},
-  games: []
+  games: [],
+  completedTiles: 0
 };
 
 // reducer with cases for Redux
@@ -17,6 +18,8 @@ function reducer(state = initialState, action) {
       return { ...state, currentPlayer: action.payload };
     case "PLAYER_TOKEN":
       return { ...state, token: action.payload };
+    case "COMPLETED_TILE":
+      return { ...state, completedTiles: state.completedTiles + 1 };
     default:
       return state;
   }

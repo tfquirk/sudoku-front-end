@@ -30,8 +30,8 @@ const Board = props => {
 
   return (
     <div style={sudokuContainer}>
-      <Timer />
       <div style={sudoku}>
+        <Timer />
         <Table>
           <Row
             row="row1"

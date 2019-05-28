@@ -38,6 +38,7 @@ const Column = props => {
 
   const correct_answer = props.solution;
   const [userAnswer, setUserAnswer] = useState("");
+  const [tileCompleted, setTileCompleted] = useState(false);
 
   const updateInput = event => {
     setUserAnswer(event.target.value);
@@ -47,7 +48,11 @@ const Column = props => {
 
   if (props.number === "0") {
     if (userAnswer === correct_answer) {
-      props.completedTileIncrease();
+      if (tileCompleted === false) {
+        props.completedTileIncrease();
+        setTileCompleted(true);
+      }
+
       return (
         <td style={tdStyle} className={`${props.row} ${props.column} green`}>
           <input style={inputStyleGreen} onChange={updateInput} />
@@ -61,7 +66,11 @@ const Column = props => {
       </td>
     );
   } else {
-    props.completedTileIncrease();
+    if (tileCompleted === false) {
+      props.completedTileIncrease();
+      setTileCompleted(true);
+    }
+
     return (
       <td style={tdStyle} className={`${props.row} ${props.column} green`}>
         {props.number}

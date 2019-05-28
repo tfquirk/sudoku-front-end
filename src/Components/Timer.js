@@ -2,10 +2,9 @@ import React, { useState, useEffect } from "react";
 
 const Timer = props => {
   const timer = {
-    border: "2px solid #000000",
-    width: "15vw",
-    height: "15vh",
-    margin: "auto"
+    margin: "0 auto 2vh auto",
+    padding: "1vh",
+    textAlign: "center"
   };
 
   const [seconds, setSeconds] = useState(0);
@@ -25,13 +24,13 @@ const Timer = props => {
   if (seconds < 10) {
     return (
       <div style={timer}>
-        <h1>00:0{seconds}</h1>
+        <h1>Timer: 00:0{seconds}</h1>
       </div>
     );
   } else if (seconds < 60) {
     return (
       <div style={timer}>
-        <h1>00:{seconds}</h1>
+        <h1>Timer: 00:{seconds}</h1>
       </div>
     );
   } else {
@@ -39,7 +38,8 @@ const Timer = props => {
     return (
       <div style={timer}>
         <h1>
-          {minutes}:{seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60}
+          Timer: {minutes}:
+          {seconds % 60 < 10 ? `0${seconds % 60}` : seconds % 60}
         </h1>
       </div>
     );

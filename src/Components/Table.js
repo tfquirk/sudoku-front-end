@@ -3,8 +3,8 @@ import React from "react";
 const Table = props => {
   const table = {
     border: "8px solid #000000",
-    width: "45vw",
-    height: "45vw",
+    width: "40vw",
+    height: "40vw",
     margin: "auto",
     background: "#000000"
   };
